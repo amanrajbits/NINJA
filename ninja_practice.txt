@@ -1,0 +1,42 @@
+https://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/
+
+Step 0: Open the Terminal and  type  sudo apt-get install git
+
+Step 1: Go back to the terminal and type this to configure git
+
+git config –global user.name “your_username”
+
+Step 2: Now type this to link your email too.
+
+git config –global user.email “your_emailid”
+
+mkdir myproject
+
+cd myproject
+
+git init
+
+git remote add origin  https://github.com/your_username/myproject.git
+
+git add helloworld.c
+
+git add .
+
+git commit -m ‘your_message’
+
+git push origin master
+
+Username for ‘ https://github.com ‘: your_username
+
+Password for ‘ https://your_username@github.com ‘ : *******
+
+git add .
+git commit -m ‘your_message’   git push origin master
+
+
+git clone https://github.com/your_username/myproject.git
+
+
+git pull origin master
+
+
