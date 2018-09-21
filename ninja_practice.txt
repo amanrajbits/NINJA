@@ -1,3 +1,6 @@
+# sudo add-apt-repository ppa:git-core/ppa # apt update; apt install git
+sudo app-get update install git
+
 https://www.geeksforgeeks.org/how-to-install-configure-and-use-git-on-ubuntu/
 
 Step 0: Open the Terminal and  type  sudo apt-get install git
@@ -32,6 +35,15 @@ Password for ‘ https://your_username@github.com ‘ : *******
 
 git add .
 git commit -m ‘your_message’   git push origin master
+
+
+
+echo "# NINJA" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/amanrajbits/NINJA.git
+git push -u origin master
 
 
 git clone https://github.com/your_username/myproject.git
