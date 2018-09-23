@@ -80,9 +80,25 @@ git branch -d branch_name: Deletes the branch specified
 git clone remote_location clone_name
 git remote -v
 git fetch
-git merge origin/maste
+git merge origin/master
 
 
+1. no merge : git chekout anuj : git merge anuj  [ to master ]
+2. fast forward : git merge master
+3. merge without conflict : git merge master  [ after change in 2 diff files]
+4. merge with conflict : git merge master  [ after change in same files]
+
+git checkout branch 
+git branch -a 
+git branch -d/D brancname 
+
+
+git log --author="sandeep"
+git log --after='2018-08-01 00:00:00'
+git log --after="2018-09-01 00:00" --before="2018-09-22 23:59"
+
+
+There is a company which has multiple projects, and they are very strict about there daily syncup meetings. They have introduced a fine system where if a person/person(s) get's late in joining the meeting they have to treat everyone with a cup of coffee. The contribution of people will vary depending on by how much time they were late. Please come with a solution for same.
 
 
 

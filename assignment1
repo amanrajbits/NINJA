@@ -1,0 +1,63 @@
+sudo apt-get install apache2
+sudo service apache status
+sudo service apache2 stop
+
+sudo apt-get install nginx
+sudo systemctl start nginx
+sudo systemctl status nginx
+
+sudo apt-get install build-essential
+
+timedatectl list-timezones
+timedatectl set-timezone Asia/Singapore
+timedatectl
+sudo apt-get install ntp
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+Next, install Java JRE and JDK from the PPA repository with apt:
+
+sudo apt-get install oracle-java8-installer -y
+java -version
+
+https://www.howtoforge.com/tutorial/how-to-install-apache-tomcat-8-5-on-ubuntu-16-04/
+
+sudo wget http://mirrors.wuchna.com/apachemirror/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz
+
+sudo tar -xzvf apache-tomcat-8.5.34.tar.gz
+
+#logrotate :
+
+https://linuxtechlab.com/install-logrotate-linux-centos-rhel-fedora-ubuntu-debian/
+https://linoxide.com/linux-how-to/setup-log-rotation-logrotate-ubuntu/
+
+logrotate /etc/logrotate.conf --debug
+
+# sudo vim /etc/logrotate.conf
+include /etc/logrotate.d
+
+# cd /etc/logrotate.d
+# vim apache
+
+/data/apache2/logs/*.log {
+				daily
+				missingok
+				rotate 50
+				notifempty
+				delaycompress
+					create 0640 www-data www-data
+				sharedscripts
+				postrotate
+				sudo /data/apache2/bin/apachectl -k graceful >> /dev/null
+				size 500KB
+					systemctl reload example-app
+				endscript
+
+			}
+
+
+
+
+
+
+

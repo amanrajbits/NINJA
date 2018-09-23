@@ -45,10 +45,8 @@ git commit -m "first commit"
 git remote add origin https://github.com/amanrajbits/NINJA.git
 git push -u origin master
 
-
 git clone https://github.com/your_username/myproject.git
-
-
 git pull origin master
+
 
 

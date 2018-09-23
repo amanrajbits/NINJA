@@ -1,0 +1,40 @@
+#Partition:
+
+https://askubuntu.com/questions/384062/how-do-i-create-and-tune-an-ext4-partition-from-the-command-line
+https://www.wikihow.com/Format-a-USB-Flash-Drive-in-Ubuntu
+
+View detected devices of class "DISK"
+
+lshw -C disk
+
+	View existing partition table(s)
+
+fdisk -l
+	Edit the partition table for my chosen device (in this case, "sdx")
+
+fdisk /dev/sdx
+
+	Within FDISK, press:
+
+		d ...to delete the current partition
+
+		n ...to create a new partition
+
+		p ...to specify it as a PRIMARY partition
+
+		1 ...to set it as the 1ST primary partition
+
+		w ...to write the changes.
+
+Display the new partition table:
+
+fdisk -l
+
+Format the new partition's filesystem as type ext4
+
+	mkfs -t ext4 /dev/sdx1
+
+Create a new directory where the new drive will mount into:
+
+mkdir /storage
+mount /dev/sdx1 /storage
