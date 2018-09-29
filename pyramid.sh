@@ -1,7 +1,9 @@
 #!/bin/bash
-read -p "enter the number of line =" num
+
 makePyramid()
 {
+
+num=$1
   #Here $1 is the parameter you passed with the function i,e 5
   n=$num;
 
@@ -31,5 +33,5 @@ makePyramid()
       echo;
   done
 }
-makePyramid num;
+makePyramid $1;
 
